@@ -5,9 +5,9 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         paper: '#F9F7F2',
-        'paper-base': '#F2EFE9',
-        'paper-card': '#F8F6F2',
-        'paper-highlight': '#FDFCFB',
+        'paper-base': '#EBE7DE',
+        'paper-card': '#FAF8F5',
+        'paper-highlight': '#FFFFFF',
         ink: '#121212',
         'ink-light': '#4A4A45',
         'moss-dark': '#2C3B24',

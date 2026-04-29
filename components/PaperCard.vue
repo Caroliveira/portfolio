@@ -1,6 +1,6 @@
 <template>
   <div class="relative p-8 md:p-12 min-h-[500px] flex flex-col">
-    <div class="absolute inset-0 bg-black/15 blur-xl translate-y-4 translate-x-2 rounded-3xl -z-10 group-hover:bg-terra-orange/15 group-hover:translate-y-8 group-hover:translate-x-4 group-hover:blur-2xl transition-all duration-500"></div>
+    <div class="absolute inset-0 bg-black/[0.12] blur-[40px] translate-y-4 scale-[0.92] -z-10 transition-all duration-1000 group-hover:bg-terra-orange/15 group-hover:translate-y-8 group-hover:blur-[60px] group-hover:scale-[0.95]"></div>
     <div class="absolute inset-0 handmade-paper deckled z-0 transition-colors duration-500 bg-paper-card group-hover:bg-paper-highlight"></div>
     
     <div class="relative z-10 flex flex-col flex-grow">

@@ -10,17 +10,3 @@
 
   </div>
 </template>
-
-<style>
-.theme-nanquim {
-  @apply text-ink;
-}
-
-.theme-aquarela {
-  @apply text-ink;
-}
-
-.theme-atelie {
-  @apply text-ink;
-}
-</style>
