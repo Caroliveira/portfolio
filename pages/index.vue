@@ -11,12 +11,7 @@ const socialLinks = [
 <template>
   <div class="aquarela-vibrant min-h-screen bg-paper-base text-ink relative font-serif overflow-hidden bg-grain">
     
-    <svg width="0" height="0" class="absolute hidden">
-      <filter id="deckled-edge">
-        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </svg>
+    <AboutHiddenLayer />
 
     <div class="fixed inset-0 pointer-events-none z-0">
       <div class="absolute top-[-10%] right-[10%] w-[60vw] h-[60vw] bg-terra-orange opacity-20 blur-[120px] ink-bleed"></div>
@@ -93,14 +88,6 @@ const socialLinks = [
 </template>
 
 <style scoped>
-.ink-bleed {
-  filter: url(#bleed);
-}
-
-.ink-bleed-text {
-  filter: url(#bleed-text);
-}
-
 .aquarela-vibrant {
   scroll-behavior: smooth;
 }
