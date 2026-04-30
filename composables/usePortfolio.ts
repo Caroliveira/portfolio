@@ -1,7 +1,7 @@
 export const usePortfolio = () => {
   const bio = {
     name: 'Carolina Ribeiro Oliveira',
-    title: 'Senior Software Engineer',
+    title: 'Software Engineer',
     yearsOfExperience: 6,
     philosophy: 'Software Engineer bridging Frontend precision with AI Engineering. Focused on building solutions that prioritize user experience and product value.'
   }

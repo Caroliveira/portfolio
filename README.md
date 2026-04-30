@@ -1,75 +1,22 @@
-# Nuxt Minimal Starter
+# Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A personal portfolio designed with a tactile aesthetic, featuring watercolor textures and recycled paper elements. For more details on the visual language, see the [Brand Identity](BRAND_IDENTITY.md).
+
+## Stack
+
+- **Framework**: [Nuxt 3](https://nuxt.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Scripts
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- `npm run dev`: Starts the development server at `localhost:3000`.
+- `npm run build`: Builds the application for production.
+- `npm run preview`: Previews the production build locally.
+- `npm run generate`: Generates a static version of the site.

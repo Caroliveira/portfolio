@@ -1,6 +1,41 @@
 <script setup lang="ts">
 const { bio, projects, experience } = usePortfolio()
 
+useSeoMeta({
+  title: `${bio.name} | ${bio.title}`,
+  ogTitle: `${bio.name} | ${bio.title}`,
+  description: bio.philosophy,
+  ogDescription: bio.philosophy,
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: bio.name,
+        jobTitle: bio.title,
+        description: bio.philosophy,
+        url: 'https://lina-oliveira.com', // Replace with actual URL if known, or leave as placeholder
+        sameAs: [
+          'https://github.com/Caroliveira',
+          'https://www.linkedin.com/in/carolina-ribeiro-oliveira'
+        ],
+        knowsAbout: [
+          'Frontend Engineering',
+          'AI Software Engineering',
+          'React',
+          'Next.js',
+          'Nuxt 3',
+          'Multi-agent systems'
+        ]
+      })
+    }
+  ]
+})
+
 const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/Caroliveira', target: '_blank', classes: 'rotate-[-3deg] hover:rotate-[2deg] hover:text-terra-orange hover:border-terra-orange/30' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/carolina-ribeiro-oliveira', target: '_blank', classes: 'rotate-[2deg] hover:rotate-[-2deg] hover:text-watercolor-ochre hover:border-watercolor-ochre/50' },
@@ -33,6 +68,7 @@ const isAboutOpen = ref(false)
             LINA.ENGINEER
           </div>
           <h1 class="text-5xl md:text-8xl font-black leading-none tracking-tighter uppercase mb-6 mix-blend-multiply">
+            <span class="sr-only">{{ bio.name }} - {{ bio.title }}</span>
             Craft<br/>
             <span class="text-terra-orange">&</span> Code
           </h1>

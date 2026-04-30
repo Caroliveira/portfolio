@@ -1,5 +1,34 @@
 <script setup lang="ts">
-const { experience } = usePortfolio()
+const { bio, experience } = usePortfolio()
+
+useSeoMeta({
+  title: `Experience | ${bio.name}`,
+  ogTitle: `Professional Trajectory | ${bio.name}`,
+  description: `Professional journey of ${bio.name}, from Frontend Intern to AI Software Engineer at iFood. Expert in React, Nuxt, and AI multi-agent systems.`,
+  ogDescription: `Explore the career path of ${bio.name}, featuring contributions to Pix (Brazil's instant payment) and leadership in AI Engineering.`,
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: bio.name,
+        hasOccupation: experience.map(exp => ({
+          '@type': 'Occupation',
+          name: exp.role,
+          description: exp.description,
+          hiringOrganization: {
+            '@type': 'Organization',
+            name: exp.company
+          }
+        }))
+      })
+    }
+  ]
+})
 </script>
 
 <template>
@@ -21,7 +50,7 @@ const { experience } = usePortfolio()
     <div class="max-w-6xl mx-auto relative">
       <header class="mb-32 text-center relative z-20 pt-16 md:pt-0">
         <h1 class="text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12 duration-1000">
-          Trajec<span class="text-terra-orange">tory</span>
+          <span class="sr-only">Professional Experience & </span>Trajec<span class="text-terra-orange">tory</span>
         </h1>
         <p class="font-handwriting text-2xl md:text-3xl text-ink/60 -rotate-2 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           A living record of professional growth
