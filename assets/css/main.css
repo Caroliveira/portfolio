@@ -26,3 +26,73 @@
   height: 0;
   visibility: hidden;
 }
+
+@layer utilities {
+  .animate-in {
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-bottom-8 {
+    animation-name: slideInFromBottom8;
+  }
+
+  .slide-in-from-bottom-12 {
+    animation-name: slideInFromBottom12;
+  }
+
+  .slide-in-from-top-12 {
+    animation-name: slideInFromTop12;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom8 {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom12 {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop12 {
+  from {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

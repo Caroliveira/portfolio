@@ -58,10 +58,10 @@ const isAboutOpen = ref(false)
                     class="block relative group transition-all duration-500 hover:-translate-y-2 hover:rotate-[1deg] cursor-pointer"
                     aria-label="View featured projects">
             <PaperCard>
-              <h2 class="text-sm font-black uppercase tracking-[0.3em] mb-12 opacity-40 mix-blend-multiply">Featured Projects</h2>
+              <h2 class="text-sm font-black uppercase tracking-[0.3em] mb-12 opacity-40 mix-blend-multiply text-moss-dark">Workbench</h2>
               <div v-for="project in projects?.slice(0, 3)" :key="project.id" class="border-b border-ink/10 pb-6 mix-blend-multiply">
                 <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight italic text-moss-dark">{{ project.title }}</h3>
-                <p class="text-base font-medium opacity-80 mt-2 text-ink-light">{{ project.description }}</p>
+                <p class="text-base font-medium opacity-80 mt-2 text-ink-light">{{ project.summary }}</p>
               </div>
               
               <span class="text-xs uppercase font-black tracking-[0.3em] text-moss-light group-hover:underline underline-offset-8 decoration-wavy mix-blend-multiply mt-auto">Explore Work &rarr;</span>

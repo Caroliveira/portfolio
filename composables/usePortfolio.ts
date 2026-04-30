@@ -9,25 +9,43 @@ export const usePortfolio = () => {
   const projects = [
     {
       id: 'linaolivetree',
-      title: 'linaolivetree',
-      tagline: 'Reflorastation through literature.',
-      description: 'An online book store where every purchase contributes to global reforestation efforts. Built with architectural sustainability in mind.',
-      tech: ['Nuxt', 'Directus', 'Stripe', 'Tailwind'],
+      title: 'Lina Olivetree',
+      logo: '/assets/images/projects/linaolivetree-logo.png',
+      tagline: 'Illustrated products & reforestation.',
+      summary: 'Tracking my reforestation mission through illustrated products.',
+      description: 'Built to manage my illustrated collection and track my reforestation mission. A transparent storefront and journal where I share my creative process and environmental impact.',
+      tech: ['Next.js 16+', 'React 19', 'Motion', 'Tailwind', 'Resend'],
+      features: [
+        'Mission Transparency System',
+        'Markdown-powered Journal',
+        'Product Showcase Catalog',
+        'Responsive Digital Stationery'
+      ],
       links: {
-        demo: '#',
+        demo: 'https://dev.linaolivetree.com/',
         github: '#'
-      }
+      },
+      status: 'In Development'
     },
     {
       id: 'nudge',
-      title: 'nudge',
-      tagline: 'Effort-based productivity.',
-      description: 'A task management app that prioritizes your flow based on your current energy levels (High, Med, Low).',
-      tech: ['Vue 3', 'Pinia', 'PWA', 'IndexedDB'],
+      title: 'Nudge',
+      logo: '/assets/images/projects/nudge-logo.png',
+      tagline: 'Sustainable micro-habits.',
+      summary: 'A mobile-first PWA designed to turn small recurring actions into sustainable habits.',
+      description: 'My daily tool for turning small recurring actions into sustainable habits. Built with a mobile-first approach, it works completely offline as a PWA and is distributed as a native Android app via TWA.',
+      tech: ['React 19', 'Vite', 'Zustand', 'Tailwind', 'PWA'],
+      features: [
+        'Mobile-First Habit Tracking',
+        'Trusted Web Activity (Android)',
+        'Offline-First Support',
+        'Internationalization (i18n)'
+      ],
       links: {
-        demo: '#',
+        demo: 'https://nudge.lina-oliveira.com/',
         github: '#'
-      }
+      },
+      status: 'Coming soon to Play Store'
     }
   ]
 
