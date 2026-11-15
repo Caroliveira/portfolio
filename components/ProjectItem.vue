@@ -1,24 +1,7 @@
 <script setup lang="ts">
-interface Project {
-  id: string
-  title: string
-  logo: string
-  tagline: string
-  description: string
-  tech: string[]
-  metrics: {
-    label: string
-    value: string
-  }
-  features: string[]
-  links: {
-    demo: string
-    github: string
-  }
-  status?: string
-}
+import type { Project } from '~/composables/usePortfolio'
 
-const props = defineProps<{
+defineProps<{
   project: Project
   index: number
 }>()
@@ -27,7 +10,7 @@ const props = defineProps<{
 <template>
   <div 
     class="relative w-full group animate-in fade-in slide-in-from-bottom-12"
-    :style="{ transitionDelay: `${index * 150}ms` }"
+    :style="{ animationDelay: `${index * 150}ms` }"
   >
     <PaperCard 
       class="relative transition-all duration-700 overflow-hidden p-0 min-h-[500px]"
@@ -60,6 +43,7 @@ const props = defineProps<{
                 <a 
                   :href="project.links.demo" 
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="group/link flex items-center gap-3 font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:text-terra-orange transition-colors"
                 >
                   <span class="w-10 h-[1px] bg-ink/30 group-hover/link:bg-terra-orange transition-colors"></span>
@@ -74,6 +58,7 @@ const props = defineProps<{
                 v-if="project.links.github !== '#'" 
                 :href="project.links.github" 
                 target="_blank"
+                rel="noopener noreferrer"
                 class="group/link flex items-center gap-3 font-black uppercase tracking-[0.2em] text-xs md:text-sm hover:text-terra-orange transition-colors"
               >
                 <span class="w-10 h-[1px] bg-ink/30 group-hover/link:bg-terra-orange transition-colors"></span>
@@ -145,8 +130,3 @@ const props = defineProps<{
   </div>
 </template>
 
-<style scoped>
-.ink-bleed {
-  filter: url(#bleed);
-}
-</style>

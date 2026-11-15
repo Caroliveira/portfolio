@@ -33,18 +33,15 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen bg-paper-base text-ink relative font-serif overflow-x-hidden bg-grain px-2 md:px-20 py-10 md:py-20">
-    <VisualFilters />
-    
+  <div class="min-h-screen bg-paper-base text-ink relative font-serif overflow-x-hidden px-2 md:px-20 py-10 md:py-20">
     <!-- Back Navigation -->
-    <button 
-      @click="navigateTo('/')" 
+    <NuxtLink 
+      to="/" 
       class="absolute top-8 left-8 z-50 group flex items-center gap-2 font-handwriting text-2xl text-ink/40 hover:text-terra-orange transition-colors duration-300"
-      aria-label="Back to Desk"
     >
       <span class="text-3xl group-hover:-translate-x-1 transition-transform duration-300" aria-hidden="true">&larr;</span>
       <span>Back to Desk</span>
-    </button>
+    </NuxtLink>
 
     <BackToTop />
 

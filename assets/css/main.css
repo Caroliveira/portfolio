@@ -16,17 +16,6 @@
   opacity: 0.08;
 }
 
-.ink-bleed {
-  filter: url(#bleed);
-}
-
-#svg-filters {
-  position: absolute;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
 @layer utilities {
   .animate-in {
     animation-fill-mode: both;
@@ -94,5 +83,12 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-bounce {
+    animation: none !important;
   }
 }

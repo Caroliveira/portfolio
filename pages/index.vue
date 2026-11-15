@@ -46,7 +46,7 @@ const isAboutOpen = ref(false)
 </script>
 
 <template>
-  <div class="vibrant-watercolor min-h-screen bg-paper-base text-ink relative font-serif overflow-hidden bg-grain">
+  <div class="vibrant-watercolor min-h-screen bg-paper-base text-ink relative font-serif overflow-hidden">
     
     <AboutHiddenLayer v-model="isAboutOpen" />
 
@@ -96,7 +96,7 @@ const isAboutOpen = ref(false)
             <PaperCard>
               <h2 class="text-sm font-black uppercase tracking-[0.3em] mb-12 opacity-40 mix-blend-multiply text-moss-dark">Workbench</h2>
               <div v-for="project in projects?.slice(0, 3)" :key="project.id" class="border-b border-ink/10 pb-6 mix-blend-multiply">
-                <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight italic text-moss-dark">{{ project.title }}</h3>
+                <h3 class="text-2xl md:text-3xl font-black tracking-tight text-moss-dark">{{ project.title }}</h3>
                 <p class="text-base font-medium opacity-80 mt-2 text-ink-light">{{ project.summary }}</p>
               </div>
               

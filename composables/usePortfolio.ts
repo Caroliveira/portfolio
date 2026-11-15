@@ -1,3 +1,27 @@
+export interface Project {
+  id: string
+  title: string
+  logo: string
+  tagline: string
+  summary: string
+  description: string
+  tech: string[]
+  features: string[]
+  links: {
+    demo: string
+    github: string
+  }
+  status?: string
+}
+
+export interface Experience {
+  year: string
+  role: string
+  company: string
+  description: string
+  highlights: string[]
+}
+
 export const usePortfolio = () => {
   const bio = {
     name: 'Carolina Ribeiro Oliveira',
@@ -6,27 +30,7 @@ export const usePortfolio = () => {
     philosophy: 'Software Engineer bridging Frontend precision with AI Engineering. Focused on building solutions that prioritize user experience and product value.'
   }
 
-  const projects = [
-    {
-      id: 'linaolivetree',
-      title: 'Lina Olivetree',
-      logo: '/assets/images/projects/linaolivetree-logo.png',
-      tagline: 'Illustrated products & reforestation.',
-      summary: 'Tracking my reforestation mission through illustrated products.',
-      description: 'Built to manage my illustrated collection and track my reforestation mission. A transparent storefront and journal where I share my creative process and environmental impact.',
-      tech: ['Next.js 16+', 'React 19', 'Motion', 'Tailwind', 'Resend'],
-      features: [
-        'Mission Transparency System',
-        'Markdown-powered Journal',
-        'Product Showcase Catalog',
-        'Responsive Digital Stationery'
-      ],
-      links: {
-        demo: 'https://dev.linaolivetree.com/',
-        github: '#'
-      },
-      status: 'In Development'
-    },
+  const projects: Project[] = [
     {
       id: 'nudge',
       title: 'Nudge',
@@ -42,14 +46,33 @@ export const usePortfolio = () => {
         'Internationalization (i18n)'
       ],
       links: {
-        demo: 'https://nudge.lina-oliveira.com/',
+        demo: 'https://nudge.linaoliveira.dev/',
         github: '#'
       },
       status: 'Coming soon to Play Store'
+    },
+    {
+      id: 'itinera',
+      title: 'Itinera',
+      logo: '/assets/images/projects/itinera-logo.svg',
+      tagline: 'Trips planned around real travel times.',
+      summary: 'A collaborative trip planner that turns a list of places into an optimized day-by-day itinerary.',
+      description: 'Built to turn a list of places into a realistic trip. It plans each day around hotels, opening hours and real travel times, combining geo-clustering, a route solver and Gemini to optimize the order, and lets travel companions plan together through shared trips and QR invites.',
+      tech: ['Next.js 16', 'React 19', 'DynamoDB', 'Gemini', 'Google Maps', 'Playwright'],
+      features: [
+        'Hybrid Itinerary Optimizer (Clustering + TSP + AI)',
+        'Real Travel Times & Opening Hours',
+        'Collaborative Trips with Roles & QR Invites',
+        'Reservations, Notes & Attachments'
+      ],
+      links: {
+        demo: 'https://itinerahub.app/',
+        github: '#'
+      }
     }
   ]
 
-  const experience = [
+  const experience: Experience[] = [
     {
       year: '2016 - 2022',
       role: 'The Click',
@@ -75,7 +98,7 @@ export const usePortfolio = () => {
       year: '2020 - 2021',
       role: 'Software Engineer',
       company: 'BizCapital',
-      description: 'At Biz, my first real job, I became the engineer I am today: someone who does whatever needs doing: Front-end, back-end, mobile, all of it. The highlight? I helped build Pix from the ground up. Brazil\'s ubiquitous instant payment system was just launching, and I was one of the people building it. I\'m incredibly proud of that.',
+      description: 'At Biz, my first real job, I became the engineer I am today: someone who does whatever needs doing: Front-end, back-end, mobile, all of it. The highlight? I built BizCapital\'s Pix integration from scratch, right as Brazil\'s now-ubiquitous instant payment system was launching. I\'m incredibly proud of that.',
       highlights: []
     },
     {

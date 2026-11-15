@@ -1,9 +1,20 @@
+<script setup lang="ts">
+const route = useRoute()
+const { public: { siteUrl } } = useRuntimeConfig()
+const canonicalUrl = computed(() => `${siteUrl}${route.path === '/' ? '/' : route.path.replace(/\/$/, '')}`)
+
+useHead({
+  link: [{ rel: 'canonical', href: canonicalUrl }]
+})
+useSeoMeta({
+  ogUrl: canonicalUrl
+})
+</script>
+
 <template>
   <NuxtLayout>
     <main class="relative">
-      <Transition name="theme-fade" mode="out-in">
-        <NuxtPage />
-      </Transition>
+      <NuxtPage />
     </main>
   </NuxtLayout>
 </template>

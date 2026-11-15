@@ -5,7 +5,7 @@ useSeoMeta({
   title: `Experience | ${bio.name}`,
   ogTitle: `Professional Trajectory | ${bio.name}`,
   description: `Professional journey of ${bio.name}, from Frontend Intern to AI Software Engineer at iFood. Expert in React, Nuxt, and AI multi-agent systems.`,
-  ogDescription: `Explore the career path of ${bio.name}, featuring contributions to Pix (Brazil's instant payment) and leadership in AI Engineering.`,
+  ogDescription: `Explore the career path of ${bio.name}, from building BizCapital's Pix integration at launch to AI Engineering at iFood.`,
 })
 
 useHead({
@@ -32,18 +32,15 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen bg-paper-base text-ink relative font-serif overflow-x-hidden bg-grain p-4 md:p-20">
-    <VisualFilters />
-    
+  <div class="min-h-screen bg-paper-base text-ink relative font-serif overflow-x-hidden p-4 md:p-20">
     <!-- Back Navigation - Now Absolute (Scrolls away) -->
-    <button 
-      @click="navigateTo('/')" 
+    <NuxtLink 
+      to="/" 
       class="absolute top-8 left-8 z-50 group flex items-center gap-2 font-handwriting text-2xl text-ink/40 hover:text-terra-orange transition-colors duration-300"
-      aria-label="Back to Desk"
     >
       <span class="text-3xl group-hover:-translate-x-1 transition-transform duration-300" aria-hidden="true">&larr;</span>
       <span>Back to Desk</span>
-    </button>
+    </NuxtLink>
 
     <BackToTop />
 
@@ -91,28 +88,5 @@ useHead({
 </template>
 
 <style scoped>
-.animate-in {
-  animation-fill-mode: both;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideInFromBottom {
-  from { transform: translateY(3rem); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInFromTop {
-  from { transform: translateY(-3rem); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.fade-in { animation: fadeIn 1s ease-out; }
-.slide-in-from-top-12 { animation: slideInFromTop 1.2s ease-out; }
-.slide-in-from-bottom-8 { animation: slideInFromBottom 0.8s ease-out; }
-
 .delay-300 { animation-delay: 300ms; }
 </style>

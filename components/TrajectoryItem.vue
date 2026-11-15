@@ -1,11 +1,5 @@
 <script setup lang="ts">
-interface Experience {
-  year: string
-  role: string
-  company: string
-  description: string
-  highlights: string[]
-}
+import type { Experience } from '~/composables/usePortfolio'
 
 defineProps<{
   exp: Experience
@@ -20,7 +14,7 @@ defineProps<{
   >
     <div 
       class="w-full md:w-3/4 lg:w-[55%] relative group animate-in fade-in slide-in-from-bottom-12 duration-1000"
-      :style="{ transitionDelay: `${index * 200}ms` }"
+      :style="{ animationDelay: `${index * 200}ms` }"
     >
       <!-- Year Badge -->
       <div class="absolute -top-8 -left-2 md:-left-8 z-20 bg-watercolor-ochre/30 px-6 py-2 font-handwriting text-2xl border border-ink/5 rotate-[-8deg] group-hover:rotate-2 transition-transform shadow-sm ink-bleed">
@@ -64,21 +58,3 @@ defineProps<{
   </section>
 </template>
 
-<style scoped>
-.animate-in {
-  animation-fill-mode: both;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideInFromBottom {
-  from { transform: translateY(3rem); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.fade-in { animation: fadeIn 1s ease-out; }
-.slide-in-from-bottom-12 { animation: slideInFromBottom 1.2s ease-out; }
-</style>

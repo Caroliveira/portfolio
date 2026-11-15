@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, onUnmounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 
 const isOpen = defineModel<boolean>({ default: false })
 const isHovered = ref(false)
@@ -25,7 +25,16 @@ watch(isOpen, async (newVal) => {
   }
 })
 
+const onKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && isOpen.value) isOpen.value = false
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+})
+
 onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
   if (typeof document !== 'undefined') {
     document.body.style.overflow = ''
   }
@@ -53,12 +62,11 @@ onUnmounted(() => {
       class="absolute top-0 left-0 w-full h-screen bg-paper-highlight text-ink z-50 transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] overflow-hidden"
       :class="layerClass"
       :aria-hidden="!isOpen"
+      :inert="!isOpen"
       role="dialog"
       aria-modal="true"
       aria-labelledby="about-title"
     >
-      <div class="absolute inset-0 bg-grain opacity-50 pointer-events-none mix-blend-overlay z-0"></div>
-      
       <!-- Watercolor Wash (Full Canvas) -->
       <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="absolute top-[-20%] left-[-20%] w-[100vw] h-[100vw] bg-watercolor-ochre opacity-30 blur-[150px] ink-bleed will-change-transform"></div>
