@@ -18,7 +18,7 @@ useHead({
         name: bio.name,
         jobTitle: bio.title,
         description: bio.philosophy,
-        url: 'https://lina-oliveira.com', // Replace with actual URL if known, or leave as placeholder
+        url: 'https://linaoliveira.dev',
         sameAs: [
           'https://github.com/Caroliveira',
           'https://www.linkedin.com/in/carolina-ribeiro-oliveira'

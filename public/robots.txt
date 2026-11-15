@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://lina-oliveira.com/sitemap.xml
+Sitemap: https://linaoliveira.dev/sitemap.xml
