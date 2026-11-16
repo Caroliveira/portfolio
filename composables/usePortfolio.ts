@@ -12,6 +12,8 @@ export interface Project {
     github: string
   }
   status?: string
+  category: string
+  platforms: string
 }
 
 export interface Experience {
@@ -49,6 +51,8 @@ export const usePortfolio = () => {
         demo: 'https://nudge.linaoliveira.dev/',
         github: '#'
       },
+      category: 'LifestyleApplication',
+      platforms: 'Web, Android',
       status: 'Coming soon to Play Store'
     },
     {
@@ -68,7 +72,9 @@ export const usePortfolio = () => {
       links: {
         demo: 'https://itinerahub.app/',
         github: '#'
-      }
+      },
+      category: 'TravelApplication',
+      platforms: 'Web'
     }
   ]
 
@@ -124,9 +130,39 @@ export const usePortfolio = () => {
     }
   ]
 
+  const { public: { siteUrl } } = useRuntimeConfig()
+  const personId = `${siteUrl}/#person`
+
+  const personSchema = {
+    '@type': 'Person',
+    '@id': personId,
+    name: bio.name,
+    alternateName: 'Lina Oliveira',
+    jobTitle: bio.title,
+    description: bio.philosophy,
+    url: `${siteUrl}/`,
+    image: `${siteUrl}/logo.png`,
+    worksFor: { '@type': 'Organization', name: 'iFood' },
+    sameAs: [
+      'https://github.com/Caroliveira',
+      'https://www.linkedin.com/in/carolina-ribeiro-oliveira'
+    ],
+    knowsAbout: [
+      'Frontend Engineering',
+      'AI Software Engineering',
+      'React',
+      'Next.js',
+      'Nuxt 3',
+      'Multi-agent systems'
+    ]
+  }
+
   return {
     bio,
     projects,
-    experience
+    experience,
+    siteUrl,
+    personId,
+    personSchema
   }
 }

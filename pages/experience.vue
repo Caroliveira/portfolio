@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { bio, experience } = usePortfolio()
+const { bio, experience, siteUrl, personSchema } = usePortfolio()
 
 useSeoMeta({
   title: `Experience | ${bio.name}`,
@@ -14,17 +14,18 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: bio.name,
-        hasOccupation: experience.map(exp => ({
-          '@type': 'Occupation',
-          name: exp.role,
-          description: exp.description,
-          hiringOrganization: {
-            '@type': 'Organization',
-            name: exp.company
-          }
-        }))
+        '@type': 'ProfilePage',
+        url: `${siteUrl}/experience`,
+        mainEntity: {
+          ...personSchema,
+          hasOccupation: experience
+            .filter(exp => exp.company !== 'University')
+            .map(exp => ({
+              '@type': 'Occupation',
+              name: exp.role,
+              description: `${exp.role} at ${exp.company} (${exp.year})`
+            }))
+        }
       })
     }
   ]

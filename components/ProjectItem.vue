@@ -86,7 +86,7 @@ defineProps<{
           
           <!-- STAMP: The Project Logo -->
           <div class="hidden md:flex absolute top-8 right-8 w-24 h-24 md:w-28 md:h-28 bg-white p-3 shadow-md rotate-[3deg] group-hover:rotate-[-2deg] transition-transform duration-700 z-20 items-center justify-center stamp-edge">
-             <img :src="project.logo" :alt="project.title" class="w-full h-full object-contain mix-blend-multiply" />
+             <img :src="project.logo" :alt="`${project.title} logo`" width="88" height="88" loading="lazy" decoding="async" class="w-full h-full object-contain mix-blend-multiply" />
              
              <!-- Cancellation Mark (Postmark) -->
              <div class="absolute -top-4 -left-4 w-16 h-16 pointer-events-none opacity-20">

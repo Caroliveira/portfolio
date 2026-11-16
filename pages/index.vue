@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { bio, projects, experience } = usePortfolio()
+const { bio, projects, experience, siteUrl, personSchema } = usePortfolio()
 
 useSeoMeta({
   title: `${bio.name} | ${bio.title}`,
@@ -14,23 +14,9 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: bio.name,
-        jobTitle: bio.title,
-        description: bio.philosophy,
-        url: 'https://linaoliveira.dev',
-        sameAs: [
-          'https://github.com/Caroliveira',
-          'https://www.linkedin.com/in/carolina-ribeiro-oliveira'
-        ],
-        knowsAbout: [
-          'Frontend Engineering',
-          'AI Software Engineering',
-          'React',
-          'Next.js',
-          'Nuxt 3',
-          'Multi-agent systems'
-        ]
+        '@type': 'ProfilePage',
+        url: `${siteUrl}/`,
+        mainEntity: personSchema
       })
     }
   ]
@@ -68,7 +54,7 @@ const isAboutOpen = ref(false)
             LINA.ENGINEER
           </div>
           <h1 class="text-5xl md:text-8xl font-black leading-none tracking-tighter uppercase mb-6 mix-blend-multiply">
-            <span class="sr-only">{{ bio.name }} - {{ bio.title }}</span>
+            <span class="sr-only">{{ bio.name }}, {{ bio.title }}: </span>
             Craft<br/>
             <span class="text-terra-orange">&</span> Code
           </h1>

@@ -87,9 +87,9 @@ onUnmounted(() => {
 
         <div class="max-w-5xl relative w-full m-auto transition-opacity duration-1000 ease-out z-10" :class="isOpen ? 'opacity-100 delay-300' : 'opacity-0'">
           
-          <h1 id="about-title" class="text-5xl md:text-7xl font-handwriting tracking-tighter mb-12 relative z-10 text-moss-dark mix-blend-multiply">
+          <h2 id="about-title" class="text-5xl md:text-7xl font-handwriting tracking-tighter mb-12 relative z-10 text-moss-dark mix-blend-multiply">
             Nice to meet you.
-          </h1>
+          </h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 relative z-10">
             

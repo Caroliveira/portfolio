@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { bio, projects } = usePortfolio()
+const { bio, projects, siteUrl, personId } = usePortfolio()
 
 useSeoMeta({
   title: `Projects | ${bio.name}`,
@@ -15,15 +15,21 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'ItemList',
+        url: `${siteUrl}/projects`,
         itemListElement: projects.map((p, i) => ({
           '@type': 'ListItem',
           position: i + 1,
           item: {
-            '@type': 'CreativeWork',
+            '@type': 'SoftwareApplication',
             name: p.title,
             description: p.summary,
             alternateName: p.tagline,
-            keywords: p.tech.join(', ')
+            applicationCategory: p.category,
+            operatingSystem: p.platforms,
+            keywords: p.tech.join(', '),
+            image: `${siteUrl}${p.logo}`,
+            ...(p.links.demo !== '#' && { url: p.links.demo }),
+            author: { '@id': personId }
           }
         }))
       })
