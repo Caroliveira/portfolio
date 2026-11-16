@@ -46,7 +46,7 @@ useHead({
     <BackToTop />
 
     <div class="max-w-6xl mx-auto relative">
-      <header class="mb-32 text-center relative z-20 pt-16 md:pt-0">
+      <header class="mb-24 md:mb-32 text-center relative z-20 pt-16 md:pt-0">
         <h1 class="text-5xl sm:text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12 duration-1000">
           <span class="sr-only">Professional Experience & </span>Trajec<span class="text-terra-orange">tory</span>
         </h1>

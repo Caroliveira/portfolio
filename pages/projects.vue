@@ -52,7 +52,7 @@ useHead({
     <BackToTop />
 
     <div class="max-w-7xl mx-auto relative">
-      <header class="mb-32 text-center relative z-20 pt-16 md:pt-0">
+      <header class="mb-16 md:mb-24 text-center relative z-20 pt-16 md:pt-0">
         <h1 class="text-5xl sm:text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12">
           <span class="sr-only">Software Engineering Portfolio - </span>Work<span class="text-terra-orange">bench</span>
         </h1>
