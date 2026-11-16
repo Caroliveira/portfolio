@@ -22,9 +22,15 @@ defineProps<{
         <!-- Left Side: The "Message" -->
         <div class="w-full md:w-3/5 p-6 md:p-14 md:pr-20 flex flex-col relative">
           <header class="mb-8 md:mb-10">
-            <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-ink mb-2 mix-blend-multiply group-hover:text-terra-orange transition-colors duration-500 leading-none">
-              {{ project.title }}
-            </h3>
+            <div class="flex items-center gap-3 sm:gap-4 mb-2 md:block">
+              <!-- Mobile stamp: same as the desktop one, which sits in the right column that stacks below on phones -->
+              <div class="md:hidden flex shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-white p-2 shadow-md rotate-[3deg] group-hover:rotate-[-2deg] transition-transform duration-700 items-center justify-center stamp-edge">
+                <img :src="project.logo" :alt="`${project.title} logo`" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain mix-blend-multiply" />
+              </div>
+              <h3 class="text-[2.5rem] sm:text-5xl md:text-7xl font-black uppercase tracking-tighter text-ink md:mb-2 mix-blend-multiply group-hover:text-terra-orange transition-colors duration-500 leading-none">
+                {{ project.title }}
+              </h3>
+            </div>
             <p class="font-handwriting text-xl md:text-3xl text-ink/40 italic">
               {{ project.tagline }}
             </p>
