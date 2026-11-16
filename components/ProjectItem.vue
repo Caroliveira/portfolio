@@ -70,7 +70,7 @@ defineProps<{
           <!-- Subtle Postmark decoration -->
           <div class="absolute bottom-12 left-12 w-24 h-24 border-2 border-ink/5 rounded-full flex items-center justify-center -rotate-12 pointer-events-none opacity-40">
              <div class="text-[8px] font-black uppercase tracking-tighter text-ink/20 text-center">
-               ORIGINAL CRAFT<br/>LINA © 2025
+               ORIGINAL CRAFT<br/>LINA © {{ new Date().getFullYear() }}
              </div>
           </div>
 

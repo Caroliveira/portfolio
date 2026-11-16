@@ -103,7 +103,7 @@ onUnmounted(() => {
 
               <h2 class="text-[10px] font-black uppercase tracking-[0.3em] text-ink/70 mb-6">The Core</h2>
               <p class="font-serif text-lg leading-relaxed text-ink/90 mix-blend-multiply">
-                In my work and my life, transparency is the foundation of everything. I am an entirely open person and I value absolute honesty, both from myself to others and vice versa. What you see is exactly what you get.
+                Transparency is the foundation of how I work and live, and it starts with communication. I'm open by nature and I value honest conversations in both directions. I also believe the obvious needs to be said: what goes unspoken is where misunderstandings grow.
               </p>
             </div>
             
@@ -119,7 +119,7 @@ onUnmounted(() => {
               <div class="mt-12 md:mt-0">
                 <h2 class="text-[10px] font-black uppercase tracking-[0.3em] text-ink/70 mb-6">Beyond the Screen</h2>
                 <p class="font-serif text-lg leading-relaxed text-ink/90 mix-blend-multiply">
-                  Away from the keyboard, I seek a simple and calm life. I share my days with my 5 pets, surrounding myself with nature and consuming art in all its forms, without exceptions.
+                  Away from the keyboard, I chase a calm life, though my five pets make sure it never gets too quiet. The rest of my time goes to puzzles and art in every form I can find.
                 </p>
               </div>
             </div>

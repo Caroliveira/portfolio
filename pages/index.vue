@@ -51,7 +51,7 @@ const isAboutOpen = ref(false)
       <div class="max-w-5xl mx-auto relative z-10 px-6 py-20">
         <header class="mb-24 flex flex-col items-start border-b border-ink/10 pb-12">
           <div class="inline-block p-2 px-4 bg-terra-orange text-white font-black text-sm tracking-widest uppercase mb-6 rotate-[-2deg] shadow-lg ink-bleed-text">
-            LINA.ENGINEER
+            LINAOLIVEIRA.DEV
           </div>
           <h1 class="text-5xl md:text-8xl font-black leading-none tracking-tighter uppercase mb-6 mix-blend-multiply">
             <span class="sr-only">{{ bio.name }}, {{ bio.title }}: </span>

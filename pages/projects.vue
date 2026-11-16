@@ -4,8 +4,8 @@ const { bio, projects, siteUrl, personId } = usePortfolio()
 useSeoMeta({
   title: `Projects | ${bio.name}`,
   ogTitle: `Engineering Projects | ${bio.name}`,
-  description: 'A curated showcase of engineering precision, from instant payment systems to AI-powered micro-services.',
-  ogDescription: 'Explore the workbench of Carolina Oliveira, featuring Frontend and AI Engineering projects.',
+  description: `Personal projects by ${bio.name}: Nudge, a mobile-first habit tracker, and Itinera, an AI-assisted trip planner built around real travel times.`,
+  ogDescription: `Explore the workbench of ${bio.name}, featuring Frontend and AI Engineering projects.`,
 })
 
 useHead({
@@ -53,7 +53,7 @@ useHead({
 
     <div class="max-w-7xl mx-auto relative">
       <header class="mb-32 text-center relative z-20 pt-16 md:pt-0">
-        <h1 class="text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12">
+        <h1 class="text-5xl sm:text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12">
           <span class="sr-only">Software Engineering Portfolio - </span>Work<span class="text-terra-orange">bench</span>
         </h1>
         <p class="font-handwriting text-2xl md:text-4xl text-ink/60 -rotate-1 animate-in fade-in slide-in-from-bottom-8 delay-300">

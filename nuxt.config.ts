@@ -6,13 +6,13 @@ export default defineNuxtConfig({
     pageTransition: { name: 'theme-fade', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Carolina Oliveira | Software Engineer',
+      title: 'Carolina Ribeiro Oliveira | Software Engineer',
       meta: [
-        { name: 'description', content: 'Software Engineer bridging Frontend precision with AI Engineering. Focused on user experience and product value.' },
+        { name: 'description', content: 'Software Engineer bridging frontend precision and AI engineering to build products that put people first.' },
         { name: 'author', content: 'Carolina Ribeiro Oliveira' },
         { name: 'theme-color', content: '#EBE7DE' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Lina Oliveira Portfolio' },
+        { property: 'og:site_name', content: 'Lina Oliveira' },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:image', content: `${siteUrl}/og-image.jpg` },
         { property: 'og:image:type', content: 'image/jpeg' },

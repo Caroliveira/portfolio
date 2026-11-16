@@ -4,7 +4,7 @@ const { bio, experience, siteUrl, personSchema } = usePortfolio()
 useSeoMeta({
   title: `Experience | ${bio.name}`,
   ogTitle: `Professional Trajectory | ${bio.name}`,
-  description: `Professional journey of ${bio.name}, from Frontend Intern to AI Software Engineer at iFood. Expert in React, Nuxt, and AI multi-agent systems.`,
+  description: `The career path of ${bio.name}, from frontend intern to AI Software Engineer at iFood, with stops at BizCapital, Andela and LettrLabs.`,
   ogDescription: `Explore the career path of ${bio.name}, from building BizCapital's Pix integration at launch to AI Engineering at iFood.`,
 })
 
@@ -47,7 +47,7 @@ useHead({
 
     <div class="max-w-6xl mx-auto relative">
       <header class="mb-32 text-center relative z-20 pt-16 md:pt-0">
-        <h1 class="text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12 duration-1000">
+        <h1 class="text-5xl sm:text-6xl md:text-9xl font-black uppercase tracking-tighter mix-blend-multiply mb-4 animate-in fade-in slide-in-from-top-12 duration-1000">
           <span class="sr-only">Professional Experience & </span>Trajec<span class="text-terra-orange">tory</span>
         </h1>
         <p class="font-handwriting text-2xl md:text-3xl text-ink/60 -rotate-2 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">

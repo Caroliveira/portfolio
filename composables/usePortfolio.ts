@@ -28,8 +28,7 @@ export const usePortfolio = () => {
   const bio = {
     name: 'Carolina Ribeiro Oliveira',
     title: 'Software Engineer',
-    yearsOfExperience: 6,
-    philosophy: 'Software Engineer bridging Frontend precision with AI Engineering. Focused on building solutions that prioritize user experience and product value.'
+    philosophy: 'Software Engineer bridging frontend precision and AI engineering to build products that put people first.'
   }
 
   const projects: Project[] = [
@@ -61,7 +60,7 @@ export const usePortfolio = () => {
       logo: '/assets/images/projects/itinera-logo.svg',
       tagline: 'Trips planned around real travel times.',
       summary: 'A collaborative trip planner that turns a list of places into an optimized day-by-day itinerary.',
-      description: 'Built to turn a list of places into a realistic trip. It plans each day around hotels, opening hours and real travel times, combining geo-clustering, a route solver and Gemini to optimize the order, and lets travel companions plan together through shared trips and QR invites.',
+      description: 'Born from a 14-day trip to New York that I planned entirely by hand: amazing, but impossible to repeat for every trip. Itinera does that work for me. It plans each day around hotels, opening hours and real travel times, combining geo-clustering, a route solver and Gemini to optimize the order, and lets travel companions plan together through shared trips and QR invites.',
       tech: ['Next.js 16', 'React 19', 'DynamoDB', 'Gemini', 'Google Maps', 'Playwright'],
       features: [
         'Hybrid Itinerary Optimizer (Clustering + TSP + AI)',
@@ -74,7 +73,8 @@ export const usePortfolio = () => {
         github: '#'
       },
       category: 'TravelApplication',
-      platforms: 'Web'
+      platforms: 'Web',
+      status: 'Interface in Portuguese'
     }
   ]
 
@@ -83,14 +83,14 @@ export const usePortfolio = () => {
       year: '2016 - 2022',
       role: 'The Click',
       company: 'University',
-      description: 'I stumbled into software engineering, as one does. During college, I built a website for my then-boyfriend’s project. He got a 98, I got a career, and eventually, a breakup. Worth it. That weekend something clicked. I was a student who hadn\'t yet found her direction, and suddenly there it was. From that point on, I threw myself into everything: elective classes, extracurriculars, and event organization. I was figuring it out, but at least now I knew which direction to figure it out in.',
+      description: 'I stumbled into software engineering. During college, I built a website for my then-boyfriend’s project. He got a 98, I got a career, and eventually, a breakup. Worth it. That weekend something clicked. I was a student who hadn\'t yet found her direction, and suddenly there it was. From that point on, I threw myself into everything: elective classes, extracurriculars, and event organization. I was figuring it out, but at least now I knew which direction to figure it out in.',
       highlights: []
     },
     {
       year: '2019',
       role: 'Frontend Intern',
       company: 'Smarti9',
-      description: 'It started at Smarti9, where I was thrown into the deep end almost immediately. The other front-end developer left right as I arrived, leaving me completely on my own. No handoff, no guidance. I became 100% self-taught out of necessity, and honestly, it set the tone for everything that came after.',
+      description: 'My first job was at Smarti9, and I was on my own almost from day one. The other front-end developer left right as I arrived: no handoff, no guidance. I had to teach myself everything on the job, and honestly, it set the tone for everything that came after.',
       highlights: []
     },
     {
@@ -104,14 +104,14 @@ export const usePortfolio = () => {
       year: '2020 - 2021',
       role: 'Software Engineer',
       company: 'BizCapital',
-      description: 'At Biz, my first real job, I became the engineer I am today: someone who does whatever needs doing: Front-end, back-end, mobile, all of it. The highlight? I built BizCapital\'s Pix integration from scratch, right as Brazil\'s now-ubiquitous instant payment system was launching. I\'m incredibly proud of that.',
+      description: 'At Biz, where my career really began, I became the engineer I am today, someone who does whatever needs doing: front-end, back-end, mobile, all of it. The highlight? I built BizCapital\'s Pix integration from scratch, right as Brazil\'s now-ubiquitous instant payment system was launching. I\'m incredibly proud of that.',
       highlights: []
     },
     {
       year: '2021 - 2024',
       role: 'Senior Frontend Engineer',
       company: 'Andela',
-      description: 'Then Andela knocked on the door, and it felt like a dream. My first international opportunity. I was thriving and promoted, but layoffs started creeping in and I let fear get the better of me. I left, and I\'ll admit, I regret it. Looking for a fresh start, I landed at LettrLabs.',
+      description: 'Then Andela knocked on the door, and it felt like a dream: my first international opportunity. I was thriving and even got promoted, but when layoffs started creeping in, I let fear get the better of me and left. I\'ll admit I regret it, and it taught me to make decisions from clarity, not fear. Looking for a fresh start, I landed at LettrLabs.',
       highlights: []
     },
     {
@@ -149,11 +149,16 @@ export const usePortfolio = () => {
     ],
     knowsAbout: [
       'Frontend Engineering',
-      'AI Software Engineering',
+      'AI Engineering',
       'React',
+      'TypeScript',
       'Next.js',
-      'Nuxt 3',
-      'Multi-agent systems'
+      'Nuxt',
+      'Python',
+      'Kotlin',
+      'Multi-agent systems',
+      'LangChain',
+      'Model Context Protocol (MCP)'
     ]
   }
 
