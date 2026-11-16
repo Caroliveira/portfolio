@@ -57,7 +57,7 @@ useHead({
           <span class="sr-only">Software Engineering Portfolio - </span>Work<span class="text-terra-orange">bench</span>
         </h1>
         <p class="font-handwriting text-2xl md:text-4xl text-ink/60 -rotate-1 animate-in fade-in slide-in-from-bottom-8 delay-300">
-          Where engineering precision meets the soul of personal creation
+          Personal projects, built for my own everyday life
         </p>
       </header>
 
